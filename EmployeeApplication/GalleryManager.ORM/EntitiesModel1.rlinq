@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DomainModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="2.0.0.0" name="EntitiesModel1" namespace="GalleryManager.ORM" showPropertiesCompartment="true" xmlns="http://www.telerik.com/ORM">
+  <orm:orm name="EntitiesModel1" backend="mssql" default-schema="dbo" xmlns:orm="http://tempuri.org/ORM">
+    <orm:namespace name="GalleryManager.ORM" default="true">
+      <orm:class name="GalleryMaster" uniqueId="3ac15939-b7a2-4e07-910b-0298483d0d73">
+        <orm:table name="GalleryMaster" />
+        <orm:identity>
+          <orm:single-field field-name="_iD" />
+        </orm:identity>
+        <orm:concurrency strategy="changed" />
+        <orm:field name="_iD" property="ID" behavior="readwrite" uniqueId="673c8a17-e721-4a64-a9d8-09e90fa03320" type="System.Int32">
+          <orm:column name="ID" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_name" property="Name" behavior="readwrite" uniqueId="2b2fc6bf-418f-402f-ad44-a3cd2ccb7ea9" type="System.String">
+          <orm:column name="Name" sql-type="varchar" nullable="true" length="100" scale="0" ado-type="StringVariableLength" />
+        </orm:field>
+        <orm:field name="_displayName" property="DisplayName" behavior="readwrite" uniqueId="696ed2f3-556d-41c2-a970-7b12846c6589" type="System.String">
+          <orm:column name="DisplayName" sql-type="varchar" nullable="true" length="100" scale="0" ado-type="StringVariableLength" />
+        </orm:field>
+      </orm:class>
+    </orm:namespace>
+    <orm:schema schema="">
+      <orm:table name="GalleryMaster">
+        <orm:column name="ID" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        <orm:column name="Name" sql-type="varchar" nullable="true" length="100" scale="0" ado-type="StringVariableLength" />
+        <orm:column name="DisplayName" sql-type="varchar" nullable="true" length="100" scale="0" ado-type="StringVariableLength" />
+      </orm:table>
+    </orm:schema>
+    <orm:relational-naming-settings>
+      <orm:remove-camel-case>False</orm:remove-camel-case>
+      <orm:source-strategy>Property</orm:source-strategy>
+    </orm:relational-naming-settings>
+  </orm:orm>
+  <ModelSettings xmlns="">
+    <AppConfigConnectionPropertyName>GalleryManagerConnection</AppConfigConnectionPropertyName>
+    <AppConfigConnectionString>Data Source=.;Initial Catalog=GalleryManager;Integrated Security=True</AppConfigConnectionString>
+    <InitialCatalog>GalleryManager</InitialCatalog>
+    <NamingSettings>
+      <ClassRules>
+        <CaseMode>PascalCase</CaseMode>
+        <PluralizationMode>Singularize</PluralizationMode>
+      </ClassRules>
+      <FieldRules>
+        <AddPrefix>_</AddPrefix>
+        <CaseMode>CamelCase</CaseMode>
+      </FieldRules>
+      <PropertyRules>
+        <CaseMode>PascalCase</CaseMode>
+      </PropertyRules>
+    </NamingSettings>
+    <CodeGenerationSettings>
+      <MappingDefinitionType>Xml</MappingDefinitionType>
+    </CodeGenerationSettings>
+    <SchemaUpdateSettings />
+    <BackendConfigurationSettings>
+      <BackendConfiguration>
+        <Backend>MsSql</Backend>
+        <ProviderName>System.Data.SqlClient</ProviderName>
+      </BackendConfiguration>
+    </BackendConfigurationSettings>
+  </ModelSettings>
+  <Types>
+    <DomainClass Id="3ac15939-b7a2-4e07-910b-0298483d0d73" name="GalleryMaster" namespace="GalleryManager.ORM" showPropertiesCompartment="true" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true">
+      <Property Id="696ed2f3-556d-41c2-a970-7b12846c6589" name="DisplayName" label="DisplayName : String" kind="Persistent" fieldName="_displayName" />
+      <Property Id="673c8a17-e721-4a64-a9d8-09e90fa03320" name="ID" type="Int32" label="ID : Int32" kind="Persistent" identity="true" fieldName="_iD" />
+      <Property Id="2b2fc6bf-418f-402f-ad44-a3cd2ccb7ea9" name="Name" label="Name : String" kind="Persistent" fieldName="_name" />
+    </DomainClass>
+  </Types>
+  <domainContext>
+    <domainModelHasDomainContext Id="c3d9d8b7-8be9-45e6-92af-64d3288576dd">
+      <domainContainer name="EntitiesModel1" namespace="GalleryManager.ORM" showPropertiesCompartment="true">
+        <entitySetProperty name="GalleryMasters" namespace="GalleryManager.ORM" type="GalleryMaster" label="GalleryMasters : IQueryable&lt;GalleryManager.ORM.GalleryMaster&gt;" />
+      </domainContainer>
+    </domainModelHasDomainContext>
+  </domainContext>
+</DomainModel>

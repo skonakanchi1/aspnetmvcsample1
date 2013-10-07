@@ -1,0 +1,34 @@
+﻿@model EmployeeApplication.ViewModel.BFGLoginViewModel
+
+@{
+    ViewBag.Title = "BFG Login";
+}
+
+<h2> BFG Login</h2>
+@using (Html.BeginForm(new { ReturnUrl = ViewBag.ReturnUrl })) {
+<fieldset>
+        <legend> BFG Log in Form</legend>
+        <ol>
+
+            <li>@ViewBag.Message</li>
+            <li>
+                @Html.LabelFor(m => m.Model.UserName)
+                @Html.TextBoxFor(m => m.Model.UserName)
+                @Html.ValidationMessageFor(m => m.Model.UserName)
+            </li>
+            <li>
+                @Html.LabelFor(m => m.Model.PassWord)
+                @Html.PasswordFor(m => m.Model.PassWord)
+                @Html.ValidationMessageFor(m => m.Model.PassWord)
+            </li>
+            <li>
+           
+             
+            </li>
+        </ol>
+        <input type="submit" value="Login" />
+    </fieldset>
+    <p>
+     sssss
+    </p>
+}

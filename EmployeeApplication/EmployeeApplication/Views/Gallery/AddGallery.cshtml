@@ -1,0 +1,37 @@
+﻿
+@model EmployeeApplication.ViewModel.BFGGalleryContentViewModel
+
+@{
+    ViewBag.Title = "AddGallery";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>AddGallery</h2>
+@using (Html.BeginForm(new { ReturnUrl = ViewBag.ReturnUrl })) {
+
+<fieldset>
+        <legend> BFG Add Gallery</legend>
+        <ol>
+
+            <li>@ViewBag.Message</li>
+            <li>
+                @Html.LabelFor(m => m.Model.Name)
+                @Html.TextBoxFor(m => m.Model.Name)
+                @Html.ValidationMessageFor(m => m.Model.Name)
+            </li>
+            <li>
+                @Html.LabelFor(m => m.Model.DisplayName)
+                @Html.TextBoxFor(m => m.Model.DisplayName)
+                @Html.ValidationMessageFor(m => m.Model.DisplayName)
+            </li>
+            <li>
+           
+             
+            </li>
+        </ol>
+        <input type="submit" value="Save" />
+    </fieldset>
+    <p>
+  
+    </p>
+}
