@@ -47,6 +47,13 @@ namespace EmployeeApplication.Controllers
             return View("GalleryGrid");
         }
 
+        public JsonResult GetAllGalleries()
+        {
+            GalleryManager.ORM.EntitiesModel1 ct = new EntitiesModel1();
+           var result =  ct.GalleryMasters.ToList();
+            return Json(result,JsonRequestBehavior.AllowGet);
+        }
+
         //
         // GET: /Employee/Create
 

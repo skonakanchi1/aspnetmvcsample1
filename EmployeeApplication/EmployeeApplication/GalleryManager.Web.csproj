@@ -611,6 +611,7 @@
     <Content Include="js\cultures\kendo.culture.zu-ZA.min.js" />
     <Content Include="js\cultures\kendo.culture.zu.min.js" />
     <Content Include="js\jquery.min.js" />
+    <Content Include="js\kendo.all.min.js" />
     <Content Include="js\kendo.autocomplete.min.js" />
     <Content Include="js\kendo.binder.min.js" />
     <Content Include="js\kendo.calendar.min.js" />
@@ -863,6 +864,7 @@
     <Content Include="Views\Employee\Login.cshtml" />
     <Content Include="Views\Gallery\AddGallery.cshtml" />
     <Content Include="Views\Gallery\GalleryGrid.cshtml" />
+    <Content Include="Views\Gallery\GalleryGridNew.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
